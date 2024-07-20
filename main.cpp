@@ -16,7 +16,10 @@ int main() {
         cap.read(img);
 
         imshow("Webcam", img);
-        waitKey(1);
+        char quitKey = (char) waitKey(1);
+        if(quitKey == 27) {
+            break;
+        }
     }
 
 }
