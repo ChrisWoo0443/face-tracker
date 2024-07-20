@@ -9,5 +9,9 @@ using namespace cv;
 using namespace std;
 
 int main() {
+    string path = "Resources/lambo.png";
+    Mat img = imread(path);
 
+    imshow("Lambo", img);
+    waitKey(0);
 }
