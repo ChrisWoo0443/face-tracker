@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.28)
-project(face_tracker)
-
+project(face_detection)
 set(CMAKE_CXX_STANDARD 17)
-
-add_executable(face_tracker main.cpp)
+find_package(OpenCV REQUIRED)
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable(face_detection main.cpp)
+target_link_libraries(face_detection ${OpenCV_LIBS})
