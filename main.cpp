@@ -9,9 +9,14 @@ using namespace cv;
 using namespace std;
 
 int main() {
-    string path = "Resources/lambo.png";
-    Mat img = imread(path);
+    VideoCapture cap(1);
+    Mat img;
 
-    imshow("Lambo", img);
-    waitKey(0);
+    while(true) {
+        cap.read(img);
+
+        imshow("Webcam", img);
+        waitKey(1);
+    }
+
 }
